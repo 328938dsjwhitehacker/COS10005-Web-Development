@@ -1,0 +1,55 @@
+/* Style the form to a fixed width */
+form {
+    width: 50em;
+}
+
+/* Style labels */
+label {
+    float: left;
+    text-align: right;
+    width: 10em;
+    margin-right: 1em;
+}
+
+/* Style inputs */
+input {
+    width: 50%;
+}
+
+/* Text input rows */
+.textinput {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+/* Radio input using Flexbox */
+.radioinput {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.radiolabel {
+    text-align: right;
+    width: 10em;
+    margin-right: 1em;
+}
+
+.radioinput input {
+    width: 2em;
+}
+
+.radioinput label {
+    margin-right: 1em;
+    text-align: left;
+}
+
+/* Submit button row */
+.buttoninput {
+    text-align: right;
+}
+
+.buttoninput input {
+    width: auto;
+}
