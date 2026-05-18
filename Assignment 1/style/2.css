@@ -1,0 +1,25 @@
+@media screen and (min-width: 1024px) {
+    main {
+        float: left;
+        border-style: solid;
+        padding: 15px;
+        background-color: lightcyan;
+        overflow: auto;
+    }
+
+    img {
+        float: right;
+        width: 25%;
+    }
+
+    section {
+        border-style: groove;
+        border-color: aliceblue;
+        background-color: antiquewhite;
+        padding: 10px;
+        box-shadow: 3px 3px 3px 2px #797979;
+        width: 70%;
+        float: left;
+        clear: both;
+    }
+}
