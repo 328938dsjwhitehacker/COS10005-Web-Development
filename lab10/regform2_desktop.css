@@ -1,0 +1,55 @@
+/* Fixed form width for consistent layout */
+form {
+    width: 50em;
+    margin: 0 auto;
+}
+
+/* Align labels and inputs */
+label {
+    float: left;
+    width: 10em;
+    margin-right: 1em;
+    text-align: right;
+}
+
+input {
+    width: 50%;
+}
+
+/* Spacing for text input rows */
+.textinput {
+    margin: 10px 0;
+}
+
+/* Radio button layout */
+.radioinput fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.radioinput legend {
+    float: left;
+    width: 9em; /* slightly smaller because it's inside a fieldset */
+    margin-right: 1em;
+    text-align: right;
+}
+
+.radioinput input {
+    width: 2em; /* override inherited width */
+}
+
+.radioinput label {
+    float: none; /* reset inherited float */
+    text-align: left;
+}
+
+/* Submit button alignment */
+.buttoninput {
+    text-align: right;
+    margin-top: 1em;
+}
+
+.buttoninput input {
+    width: auto; /* reset inherited width */
+}
