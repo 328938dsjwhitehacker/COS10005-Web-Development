@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimated Bill Calculator – Restaurant Discovery Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommend</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="bill.html" class="active">Bill Estimator</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="bill-section">
+        <h1>Estimated Bill Calculator</h1>
+        <p>Use this tool to estimate your total dining cost based on restaurant pricing and group size.</p>
+
+        <form id="billForm">
+
+            <!-- Restaurant Selection -->
+            <label for="billRestaurant">Select Restaurant:</label>
+            <select id="billRestaurant" required>
+                <option value="">-- Select --</option>
+                <option value="Zambrero Australia">Zambrero Australia ($15–$25)</option>
+                <option value="Ember & Oak Grillhouse">Ember & Oak Grillhouse ($35–$55)</option>
+                <option value="Sakura Blossom Sushi Bar">Sakura Blossom Sushi Bar ($25–$45)</option>
+                <option value="Spice Route Indian Kitchen">Spice Route Indian Kitchen ($20–$35)</option>
+                <option value="Bella Roma Trattoria">Bella Roma Trattoria ($30–$50)</option>
+                <option value="GreenLeaf Vegan Bistro">GreenLeaf Vegan Bistro ($22–$40)</option>
+            </select>
+
+            <!-- Group Size -->
+            <label for="groupSize">Number of People:</label>
+            <input type="number" id="groupSize" min="1" placeholder="Enter group size" required>
+
+            <!-- Calculate Button -->
+            <button type="button" id="calculateBill">Calculate Estimated Bill</button>
+
+        </form>
+
+        <!-- Result Box -->
+        <div id="billResult" class="result-box"></div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Restaurant Discovery Platform</p>
+</footer>
+
+</body>
+</html>
+
+

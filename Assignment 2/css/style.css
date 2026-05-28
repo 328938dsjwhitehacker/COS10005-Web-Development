@@ -1,0 +1,199 @@
+/* ===========================
+   GLOBAL STYLES
+   =========================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #222;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p, label, input, select, textarea {
+    font-size: 1rem;
+}
+
+/* ===========================
+   NAVIGATION BAR
+   =========================== */
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+    padding: 15px;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    color: #ffcc00;
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+/* ===========================
+   SECTIONS
+   =========================== */
+
+section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.service-grid,
+.restaurant-grid {
+    display: grid;
+    gap: 20px;
+}
+
+/* ===========================
+   RESTAURANT CARDS
+   =========================== */
+
+.restaurant-card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.restaurant-card img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* ===========================
+   FORMS
+   =========================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+input, select, textarea, button {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+/* Hidden sections for JS logic */
+.hidden {
+    display: none;
+}
+
+/* Error messages */
+#errorMessages {
+    color: red;
+    font-weight: bold;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    margin-top: 40px;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+/* Mobile (≤ 767px) */
+@media (max-width: 767px) {
+    .service-grid,
+    .restaurant-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-img {
+        height: 250px;
+    }
+}
+
+/* Tablet (768px–1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .service-grid,
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-img {
+        height: 300px;
+    }
+}
+
+/* Desktop (≥ 1024px) */
+@media (min-width: 1024px) {
+    .service-grid,
+    .restaurant-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-img {
+        height: 400px;
+    }
+}

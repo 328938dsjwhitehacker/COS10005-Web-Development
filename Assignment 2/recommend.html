@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Recommendations – Restaurant Discovery Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html" class="active">Recommend</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="bill.html">Bill Calculator</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="recommend-section">
+        <h1>Find the Best Restaurant for You</h1>
+        <p>Select your preferences below to receive personalised recommendations.</p>
+
+        <!-- Recommendation Form -->
+        <form id="recommendForm">
+
+            <!-- Dietary Preference -->
+            <label for="diet">Dietary Preference:</label>
+            <select id="diet" name="diet" required>
+                <option value="">-- Select --</option>
+                <option value="none">None</option>
+                <option value="vegan">Vegan</option>
+                <option value="halal">Halal</option>
+            </select>
+
+            <!-- Budget Range -->
+            <label for="budget">Budget Range (per person):</label>
+            <select id="budget" name="budget" required>
+                <option value="">-- Select --</option>
+                <option value="low">$15–$25</option>
+                <option value="medium">$25–$40</option>
+                <option value="high">$40+</option>
+            </select>
+
+            <!-- Dining Purpose -->
+            <label for="purpose">Dining Purpose:</label>
+            <select id="purpose" name="purpose" required>
+                <option value="">-- Select --</option>
+                <option value="family">Family</option>
+                <option value="date">Date</option>
+                <option value="business">Business</option>
+            </select>
+
+            <button type="button" id="getRecommendation">Get Recommendation</button>
+        </form>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <h2>Recommended Restaurants</h2>
+        <div id="resultsContainer">
+            <!-- JavaScript will insert recommended restaurant cards here -->
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Restaurant Discovery Platform</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

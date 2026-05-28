@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation – Restaurant Discovery Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommend</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="reservation.html" class="active">Reservation</a></li>
+            <li><a href="bill.html">Bill Calculator</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="reservation-section">
+        <h1>Make a Reservation</h1>
+        <p>Please complete the form below to reserve your table.</p>
+
+        <form id="reservationForm" method="post"
+              action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+
+            <!-- Full Name -->
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <!-- Email -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Phone -->
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <!-- Restaurant Selection -->
+            <label for="restaurant">Select Restaurant:</label>
+            <select id="restaurant" name="restaurant" required>
+                <option value="">-- Select --</option>
+                <option value="Zambrero Australia">Zambrero Australia</option>
+                <option value="Ember & Oak Grillhouse">Ember & Oak Grillhouse</option>
+                <option value="Sakura Blossom Sushi Bar">Sakura Blossom Sushi Bar</option>
+                <option value="Spice Route Indian Kitchen">Spice Route Indian Kitchen</option>
+                <option value="Bella Roma Trattoria">Bella Roma Trattoria</option>
+                <option value="GreenLeaf Vegan Bistro">GreenLeaf Vegan Bistro</option>
+            </select>
+
+            <!-- Reservation Date -->
+            <label for="date">Reservation Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <!-- Reservation Time -->
+            <label for="time">Reservation Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <!-- Number of People -->
+            <label for="people">Number of People:</label>
+            <input type="number" id="people" name="people" min="1" required>
+
+            <!-- Special Requests -->
+            <label for="requests">Special Requests (Optional):</label>
+            <textarea id="requests" name="requests" rows="3"></textarea>
+
+            <!-- Deposit Amount -->
+            <label for="deposit">Deposit Amount:</label>
+            <input type="text" id="deposit" name="deposit" readonly>
+
+            <!-- Payment Method -->
+            <label for="payment">Deposit Method:</label>
+            <select id="payment" name="payment" required>
+                <option value="">-- Select --</option>
+                <option value="voucher">Voucher</option>
+                <option value="online">Online Payment</option>
+            </select>
+
+            <!-- Voucher Code -->
+            <div id="voucherSection" class="hidden">
+                <label for="voucherCode">Voucher Code (12 digits):</label>
+                <input type="text" id="voucherCode" name="voucherCode" maxlength="12">
+            </div>
+
+            <!-- Credit Card -->
+            <div id="cardSection" class="hidden">
+                <label for="cardNumber">Credit Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber"
+                       placeholder="Visa/MC: 16 digits, Amex: 15 digits">
+            </div>
+
+            <!-- Billing Email -->
+            <label for="billingEmail">Billing Email Address:</label>
+            <input type="email" id="billingEmail" name="billingEmail" required>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="sameEmail">
+                <label for="sameEmail">Same as email address</label>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" id="submitBtn">Confirm Reservation</button>
+
+            <!-- Error Messages -->
+            <div id="errorMessages"></div>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Restaurant Discovery Platform</p>
+</footer>
+
+</body>
+</html>
